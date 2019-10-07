@@ -1,0 +1,6 @@
+---
+- name: Install Chrome
+  include: chrome.yml
+  tags:
+    - google-chrome
+    - browser

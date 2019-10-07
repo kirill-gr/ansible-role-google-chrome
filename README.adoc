@@ -1,0 +1,3 @@
+= Install Google Chrome Ansible role
+
+Designed for Ubuntu, tested on 18.04 and 19.04
