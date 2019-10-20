@@ -1,6 +1,4 @@
 ---
+
 - name: Install Chrome
-  include: chrome.yml
-  tags:
-    - google-chrome
-    - browser
+  import_tasks: chrome.yml
