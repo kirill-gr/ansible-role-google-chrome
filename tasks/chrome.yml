@@ -5,19 +5,11 @@
     url: https://dl.google.com/linux/linux_signing_key.pub
     state: present
   become: yes
-  register: chrome_repo_key
 
 - name: Add Google Chrome repository
   apt_repository:
     repo: "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main"
   become: yes
-  register: chrome_repo
-
-- name: Update repositories
-  apt:
-    update_cache: yes
-  become: yes
-  when: chrome_repo.changed or chrome_repo_key.changed
 
 - name: Install Google Chrome
   apt:
